@@ -1,0 +1,80 @@
+// Color (Red: #b5121b, Blue: #2081be, Green: #6c9f2e, Yellow: #ff9b00) ------------------------------------------------
+$color-primary: #6b22c3;
+$color-primary-light: lighten($color-primary, 5%);
+$color-primary-dark: darken($color-primary, 10%);
+
+$color-secondary: #1c9ad6;
+$color-secondary-light: lighten($color-secondary, 5%);
+$color-secondary-dark: darken($color-secondary, 10%);
+
+$color-tertiary: #ed1e83;
+$color-tertiary-light: lighten($color-tertiary, 5%);
+$color-tertiary-dark: darken($color-tertiary, 10%);
+
+$color-quaternary: #001845;
+$color-quaternary-light: lighten($color-quaternary, 5%);
+$color-quaternary-dark: darken($color-quaternary, 10%);
+
+$color-quinary: #f68b1f;
+$color-quinary-light: lighten($color-quinary, 5%);
+$color-quinary-dark: darken($color-quinary, 10%);
+
+$color-senary: #ffe710;
+$color-senary-light: lighten($color-senary, 5%);
+$color-senary-dark: darken($color-senary, 10%);
+
+$color-gray: #888888;
+$color-gray-light: lighten($color-gray, 10%);
+$color-gray-dark: darken($color-gray, 10%);
+
+$color-white: #ffffff;
+$color-white-dark: darken($color-white, 10%);
+
+$color-black: #000000;
+$color-black-light: lighten($color-black, 10%);
+
+$color-none: transparent;
+
+
+// Shadow --------------------------------------------------------------------------------------------------------------
+$shadow: 0px 0px 5px 1px rgba(0,0,0,.1);
+$shadow-hover: 0 20px 30px 0 rgba(0,0,0,.3);
+$shadow-down: 0 2px 3px rgba(0,0,0,.3);
+
+// Typography ----------------------------------------------------------------------------------------------------------
+$font-awesome: 'Font Awesome 5 Pro';
+$font-headline: 'Vollkorn', serif;
+$font-body: 'Vollkorn', serif;
+$font-color: $color-quaternary;
+$font-size: 16px;
+$font-small: 12px;
+
+// Layout --------------------------------------------------------------------------------------------------------------
+$whitespace: 2em;
+$corners: 0;
+$background: #F8F8F8;
+$midground: rgba(0,0,0,.5);
+$midground-hover: rgba(0,0,0,.8);
+$midground-text: #FFFFFF;
+$foreground: #FFFFFF;
+$foreground-text: $font-color;
+
+// Header (Main Menu) --------------------------------------------------------------------------------------------------
+$header-menu-height: 160px;
+$header-menu-logo-width: 350px;
+$header-menu-background: #FFFFFF;
+$header-menu-text: $font-color;
+$header-menu-text-hover: $color-primary;
+$header-menu-text-hover-underline: $color-primary;
+$header-menu-accordion: $color-white;
+
+// Footer (Footer Menu) ------------------------------------------------------------------------------------------------
+$footer-menu-background: $color-quaternary;
+$footer-menu-text: $color-white;
+$footer-menu-text-hover: $color-white;
+$footer-menu-text-hover-underline: $color-none;
+
+// Alerts --------------------------------------------------------------------------------------------------------------
+$color-alert-error: #B5121B;
+$color-alert-warning: #F5A623;
+$color-alert-success: #6C9F2E;

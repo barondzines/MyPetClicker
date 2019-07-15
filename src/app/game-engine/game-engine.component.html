@@ -1,0 +1,68 @@
+<!--- This is the general game content block ---->
+<div class="grid-container full">
+<app-save-load></app-save-load>
+</div>
+<div class="grid-container full">
+  <div class="grid-x grid-padding-x medium-up-3">
+    <div class="cell activities-wall">
+      <app-activities-engine></app-activities-engine>
+    </div>
+    <div class="cell animal-wall">
+      <div class="grid-x grid-margin-y">
+        <div class="cell animal-wall-section">
+          <app-animal-engine></app-animal-engine>
+        </div>
+        <div class="cell magic-wall-section">
+          <app-magic-engine></app-magic-engine>
+          <div class="cell text-center button-container">
+            <div class="cell" >
+              <button id="magicButton" (click)="createAllMagic()" class="button primary">Make Magic</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="cell items-wall">
+      <app-wonderland-engine></app-wonderland-engine>
+    </div>
+  </div>
+</div>
+
+
+<ul class="tabs" data-responsive-accordion-tabs="tabs medium-accordion large-tabs" id="example-tabs">
+  <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Tab 1</a></li>
+  <li class="tabs-title"><a  data-tabs-target="game/101112/panel2" href="#panel2">Tab 2</a></li>
+  <li class="tabs-title"><a  data-tabs-target="game/101112/panel3" href="#panel3">Tab 3</a></li>
+  <li class="tabs-title"><a  data-tabs-target="game/101112/panel4" href="#panel4">Tab 4</a></li>
+  <li class="tabs-title"><a  data-tabs-target="game/101112/panel5" href="#panel5">Tab 5</a></li>
+  <li class="tabs-title"><a  data-tabs-target="game/101112/panel6" href="#panel6">Tab 6</a></li>
+</ul>
+
+<div class="tabs-content" data-tabs-content="example-tabs">
+  <div class="tabs-panel is-active" id="panel1">
+    <p>one</p>
+    <p>Check me out! I'm a super cool Tab panel with text content!</p>
+  </div>
+  <div class="tabs-panel" id="panel2">
+    <p>two</p>
+    <img class="thumbnail" src="assets/img/generic/rectangle-7.jpg">
+  </div>
+  <div class="tabs-panel" id="panel3">
+    <p>three</p>
+    <p>Check me out! I'm a super cool Tab panel with text content!</p>
+  </div>
+  <div class="tabs-panel" id="panel4">
+    <p>four</p>
+    <img class="thumbnail" src="assets/img/generic/rectangle-2.jpg">
+  </div>
+  <div class="tabs-panel" id="panel5">
+    <p>five</p>
+    <p>Check me out! I'm a super cool Tab panel with text content!</p>
+  </div>
+  <div class="tabs-panel" id="panel6">
+    <p>six</p>
+    <img class="thumbnail" src="assets/img/generic/rectangle-8.jpg">
+  </div>
+</div>
+<!--- This is the end of the general game content block ---->

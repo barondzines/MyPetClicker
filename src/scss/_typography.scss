@@ -1,0 +1,51 @@
+// Typography ----------------------------------------------------------------------------------------------------------
+body,
+html {
+	font-size: 16px;
+	font-family: $font-body;
+	color: $font-color;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+	font-family: $font-headline;
+	margin-bottom: 0.6rem;
+	font-weight: bold;
+	line-height: 100%;
+
+	a {
+		text-decoration: none;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+}
+
+h1, .h1 {
+	font-size: 2.5rem;
+}
+
+h2, .h2 {
+	font-size: 1.8rem;
+}
+
+h3, .h3 {
+	font-size: 1.3rem;
+}
+
+h4, .h4 {
+	font-size: 1.25rem;
+}
+
+h5, .h5 {
+	font-size: 1.2rem;
+}
+
+h6, .h6 {
+	font-size: 1rem;
+}

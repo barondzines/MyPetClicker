@@ -1,0 +1,97 @@
+.bar {
+
+    height: 20px; /* Can be anything */
+    position: relative;
+    background: #555;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+    padding: 10px;
+    box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
+
+    span {
+        display: block;
+        height: 100%;
+        background-color: #000;
+        position:absolute;
+        left:0;
+        bottom:0;
+        border-radius:25px;
+    }
+
+    &.hidden {
+        display:none;
+    }
+}
+
+// Spacing -------------------------------------------------------------------------------------------------------------
+
+.padding-y {
+    padding-top: $whitespace;
+    padding-bottom: $whitespace;
+    &.no-top {
+        padding-top: 0;
+    }
+    &.no-bottom {
+        padding-bottom: 0;
+    }
+}
+.padding-x {
+    padding-left: $whitespace;
+    padding-right: $whitespace;
+}
+
+.space{
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+}
+
+
+//Global Button Styling ------------------------------------------------------------------------------------------------
+
+.button{
+
+    background-color: $color-primary;
+
+    &.primary {
+
+        border-radius:15px;
+        background-color: $color-primary;
+
+        &:hover{
+            background-color: darken($color-primary, 10%);
+        }
+
+        &:focus{
+                outline: none;
+            background-color: darken($color-primary, 10%);
+        }
+
+        &:disabled{
+            background-color: darken($color-primary, 10%);
+            &:hover{
+                background-color: darken($color-primary, 10%);
+            }
+        }
+    }
+
+}
+
+.details{
+    font-size:$font-small;
+}
+
+progress{
+
+    @include progress-container;
+    @include foundation-progress-bar;
+    position: relative;
+    width:100%;
+}
+
+.animal-img{
+
+    max-width: 450px;
+    margin: 0 auto;
+}
+

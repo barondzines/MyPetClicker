@@ -1,0 +1,178 @@
+/* You can add global styles to this file, and also import other style files */
+@import url(~@angular/material/prebuilt-themes/indigo-pink.css);
+.bar {
+  height: 20px;
+  /* Can be anything */
+  position: relative;
+  background: #555;
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+  padding: 10px;
+  box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3); }
+  .bar span {
+    display: block;
+    height: 100%;
+    background-color: #000;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: 25px; }
+  .bar.hidden {
+    display: none; }
+
+.padding-y {
+  padding-top: 2em;
+  padding-bottom: 2em; }
+  .padding-y.no-top {
+    padding-top: 0; }
+  .padding-y.no-bottom {
+    padding-bottom: 0; }
+
+.padding-x {
+  padding-left: 2em;
+  padding-right: 2em; }
+
+.space {
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem; }
+
+.button {
+  background-color: #6b22c3; }
+  .button.primary {
+    border-radius: 15px;
+    background-color: #6b22c3; }
+    .button.primary:hover {
+      background-color: #531a98; }
+    .button.primary:focus {
+      outline: none;
+      background-color: #531a98; }
+    .button.primary:disabled {
+      background-color: #531a98; }
+      .button.primary:disabled:hover {
+        background-color: #531a98; }
+
+.details {
+  font-size: 12px; }
+
+progress {
+  height: 1.2rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  background-color: #cacaca;
+  position: relative;
+  width: 100%; }
+  progress .progress {
+    height: 1.2rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    background-color: #cacaca; }
+    progress .progress.primary .progress-meter {
+      background-color: #6b22c3; }
+    progress .progress.secondary .progress-meter {
+      background-color: #6b22c3; }
+    progress .progress.success .progress-meter {
+      background-color: #6b22c3; }
+    progress .progress.warning .progress-meter {
+      background-color: #6b22c3; }
+    progress .progress.alert .progress-meter {
+      background-color: #6b22c3; }
+  progress .progress-meter {
+    position: relative;
+    display: block;
+    width: 0%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 0; }
+  progress .progress-meter-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #fefefe;
+    white-space: nowrap;
+    border-radius: 10px; }
+
+.animal-img {
+  max-width: 450px;
+  margin: 0 auto; }
+
+body,
+html {
+  font-size: 16px;
+  font-family: "Vollkorn", serif;
+  color: #001845; }
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: "Vollkorn", serif;
+  margin-bottom: 0.6rem;
+  font-weight: bold;
+  line-height: 100%; }
+  h1 a, .h1 a,
+  h2 a, .h2 a,
+  h3 a, .h3 a,
+  h4 a, .h4 a,
+  h5 a, .h5 a,
+  h6 a, .h6 a {
+    text-decoration: none; }
+    h1 a:hover, .h1 a:hover,
+    h2 a:hover, .h2 a:hover,
+    h3 a:hover, .h3 a:hover,
+    h4 a:hover, .h4 a:hover,
+    h5 a:hover, .h5 a:hover,
+    h6 a:hover, .h6 a:hover {
+      text-decoration: none; }
+
+h1, .h1 {
+  font-size: 2.5rem; }
+
+h2, .h2 {
+  font-size: 1.8rem; }
+
+h3, .h3 {
+  font-size: 1.3rem; }
+
+h4, .h4 {
+  font-size: 1.25rem; }
+
+h5, .h5 {
+  font-size: 1.2rem; }
+
+h6, .h6 {
+  font-size: 1rem; }
+
+.items-container .item-card-container {
+  background-color: #fff;
+  border-radius: 10px; }
+
+.xp-bar {
+  position: relative; }
+  .xp-bar .xp-bar-container {
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    top: 0;
+    margin: 0 auto;
+    height: 1rem;
+    z-index: 100; }
+    .xp-bar .xp-bar-container .xp-bar-text {
+      font-size: 12px;
+      color: #ffffff; }
+
+html, body {
+  height: 100%; }
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/*# sourceMappingURL=styles.css.map */

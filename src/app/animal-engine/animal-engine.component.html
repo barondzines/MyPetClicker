@@ -1,0 +1,53 @@
+<!--- This is the animal output html block ---->
+
+<div class="grid-x">
+
+    <div *ngFor="let core of animals" class="cell text-center">
+        <div *ngIf="core.selected === true" class="grid-x">
+
+            <div class="cell"><h2>{{core.name}}</h2></div>
+            <div class="cell animal-img"><img [src]="core.img" alt="{{core.name}}"></div>
+
+        </div>
+    </div>
+
+    <div class="cell animal-cell">
+        <div class="grid-x animal-container">
+
+            <div *ngFor="let animal of animals" class="cell">
+
+                <div *ngIf="animal.selected === true" class="grid-x">
+
+                    <div id="animal-id" class="cell hide">{{animal.id}}</div>
+
+                    <div class="cell"><strong>Level: </strong><span id="animal-lvl">{{animal.lvl}}</span></div>
+
+                    <div  class="cell">
+                        <strong>Experience</strong>
+                    </div>
+
+                    <div id="needed-xp" class="cell xp-bar">
+                        <div class="xp-bar-container"><p class="xp-bar-text"><span id="current-xp">{{animal.currentExperience}}</span>/<span id="animal-exp">{{animal.experienceNeeded}}</span></p></div>
+                        <progress class="alert xp-bar-progress" max="{{animal.experienceNeeded}}" value="{{animal.currentExperience}}"></progress>
+                    </div>
+
+                    <div class="cell">
+
+                        <div class="grid-x small-up-4 details">
+                            <div class="cell"><strong>Int:</strong> <span id="animal-int">{{animal.intelligence}}</span></div>
+                            <div class="cell"><strong>Beauty:</strong> <span id="animal-beauty">{{animal.beauty}}</span></div>
+                            <div class="cell"><strong>Str:</strong> <span id="animal-str">{{animal.str}}</span></div>
+                            <div class="cell"><strong>Speed:</strong> <span id="animal-speed">{{animal.speed}}</span></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<!--- This is the end of the animal output html block ---->

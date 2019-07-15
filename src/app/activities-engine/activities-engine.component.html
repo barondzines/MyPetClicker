@@ -1,0 +1,45 @@
+<h3>Animal Activities</h3>
+<div  class="grid-x grid-margin-x grid-padding-x grid-padding-y">
+
+    <div class="cell" *ngFor="let activity of activities">
+
+        <div class="grid-x">
+
+            <div id="{{activity.id}}" class="cell"><strong><span id="activity-name">{{activity.name}}</span></strong></div>
+
+            <div class="cell">
+
+                <strong>Minimum Stats Needed</strong>
+                <div class="grid-x small-up-4">
+                    <div class="cell"><strong>Strength: </strong><span id="{{activity.name}}-activity-str"></span>{{activity.str}}</div>
+                    <div class="cell"><strong>Beauty: </strong><span id="{{activity.name}}-activity-beauty"></span>{{activity.beauty}}</div>
+                    <div class="cell"><strong>Intelligence: </strong><span id="{{activity.name}}-activity-int"></span>{{activity.intelligence}}</div>
+                    <div class="cell"><strong>Speed: </strong><span id="{{activity.name}}-activity-speed"></span>{{activity.speed}}</div>
+            </div>
+
+            <div class="cell">
+
+                <strong class="space">Details</strong>
+                <div class="grid-x small-up-5 details">
+                    <div class="cell"><strong>Lvl: </strong><span id="{{activity.name}}-activity-lvl"></span>{{activity.lvl}}</div>
+                    <div class="cell"><strong>Cost: </strong><span id="{{activity.name}}-activity-cost"></span>{{activity.cost}}</div>
+                    <div class="cell"><strong>Count: </strong><span id="{{activity.name}}-activity-count"></span>{{activity.count}}</div>
+                    <div class="cell"><strong>Reward: </strong><span id="{{activity.name}}-activity-reward"></span>{{activity.reward}}</div>
+                    <div class="cell"><strong>Exp Gain: </strong><span>{{activity.expGain}}</span></div>
+                </div>
+
+            </div>
+
+            <div class="cell">
+
+                <div [class.hidden]="activity.isrunning === false" class="bar space"><span [style.width.%]="width"></span></div>
+
+            </div>
+
+            <div class="cell space"><button [disabled]="checkActivities(activity.id)" class="button primary" (click)="purchaseActivity(activity.cost, activity.id)">Enter {{activity.name}}</button></div>
+
+        </div>
+
+    </div>
+</div>
+

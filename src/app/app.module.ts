@@ -16,6 +16,7 @@ import {RouterModule, Routes} from "@angular/router";
 
 import {ProgressBar, ProgressBarModule} from "ngx-progress-bar";
 import { MaterialModule } from "./material/material.module";
+import {MatCardModule} from "@angular/material";
 
 
 const appRoutes: Routes =[
@@ -52,7 +53,8 @@ const appRoutes: Routes =[
         ProgressBarModule,
         RouterModule.forRoot(
             appRoutes,
-        )
+        ),
+        MatCardModule
 
     ],
   providers: [MagicCountService, ActivitiesService,MagicEngineComponent,  WonderlandEngineComponent, AnimalEngineComponent, GameEngineComponent,SaveLoadComponent],

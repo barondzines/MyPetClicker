@@ -96,8 +96,11 @@ progress {
     white-space: nowrap;
     border-radius: 10px; }
 
+.animal-card {
+  max-width: 300px; }
+
 .animal-img {
-  max-width: 450px;
+  max-width: 300px;
   margin: 0 auto; }
 
 body,
@@ -167,12 +170,5 @@ h6, .h6 {
     .xp-bar .xp-bar-container .xp-bar-text {
       font-size: 12px;
       color: #ffffff; }
-
-html, body {
-  height: 100%; }
-
-body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 /*# sourceMappingURL=styles.css.map */

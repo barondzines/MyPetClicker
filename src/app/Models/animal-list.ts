@@ -16,7 +16,7 @@ export const ANIMALS: Animal[] = [
         speed: 100,
         str: 25,
         img: 'assets/unicorn.jpg',
-        icon: '.assets/unicorn-icon.jpg',
+        icon: 'assets/unicorn-icon.jpg',
         upgradeCost: 1000,
         selected: false,
     },

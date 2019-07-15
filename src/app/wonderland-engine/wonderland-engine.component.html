@@ -1,46 +1,50 @@
-<h3>Animal Items</h3>
+<div class="grid-container">
 
-<div  class="grid-x">
+  <div class="mat-headline">Animal Items</div>
 
-  <div class="cell" *ngFor="let item of items">
+  <div  class="grid-x padding-y">
 
-    <div class="grid-x grid-margin-x grid-padding-x grid-padding-y">
+    <div class="cell" *ngFor="let item of items">
 
-      <div class="cell item-card-container">
-        <div class="grid-x">
-          <h6>{{item.name}}</h6>
-          <div class="cell">{{item.description}}</div>
+      <div class="grid-x grid-margin-x grid-padding-x grid-padding-y">
 
-          <div class="cell">
+        <div class="cell item-card-container">
+          <div class="grid-x">
+            <h6>{{item.name}}</h6>
+            <div class="cell">{{item.description}}</div>
 
-            <div class="grid-x small-up-3">
-              <div class="cell"><strong>Cost:</strong><span id="{{item.name}}-item-cost">{{item.cost}}</span> </div>
-              <div class="cell"><strong>Count:</strong> <span id="{{item.name}}-item-count">{{item.count}}</span></div>
-              <div class="cell"><strong>Lvl:</strong> <span id="{{item.name}}-item-lvl">{{item.lvl}}</span></div>
+            <div class="cell">
+
+              <div class="grid-x small-up-3">
+                <div class="cell"><strong>Cost:</strong><span id="{{item.name}}-item-cost">{{item.cost}}</span> </div>
+                <div class="cell"><strong>Count:</strong> <span id="{{item.name}}-item-count">{{item.count}}</span></div>
+                <div class="cell"><strong>Lvl:</strong> <span id="{{item.name}}-item-lvl">{{item.lvl}}</span></div>
+              </div>
+
             </div>
 
-          </div>
+            <div class="cell">
 
-          <div class="cell">
+              <h5 class="space">Skill Bonus:</h5>
+              <div class="grid-x small-up-5 align-center align-middle details">
+                <div class="cell"><strong>Strength: </strong> +<span id="{{item.name}}-item-str">{{item.strUpgrade}}</span></div>
+                <div class="cell"><strong>Beauty: </strong> +<span id="{{item.name}}-item-beauty">{{item.beautyUpgrade}}</span></div>
+                <div class="cell"><strong>Int: </strong> +<span id="{{item.name}}-item-int">{{item.intUpgrade}}</span></div>
+                <div class="cell"><strong>Speed: </strong> +<span id="{{item.name}}-item-speed">{{item.speedUpgrade}}</span></div>
+                <div class="cell"><strong>Exp Gain: </strong> <span>{{item.expGain}}</span></div>
+              </div>
 
-            <h5 class="space">Skill Bonus:</h5>
-            <div class="grid-x small-up-5 align-center align-middle details">
-              <div class="cell"><strong>Strength: </strong> +<span id="{{item.name}}-item-str">{{item.strUpgrade}}</span></div>
-              <div class="cell"><strong>Beauty: </strong> +<span id="{{item.name}}-item-beauty">{{item.beautyUpgrade}}</span></div>
-              <div class="cell"><strong>Int: </strong> +<span id="{{item.name}}-item-int">{{item.intUpgrade}}</span></div>
-              <div class="cell"><strong>Speed: </strong> +<span id="{{item.name}}-item-speed">{{item.speedUpgrade}}</span></div>
-              <div class="cell"><strong>Exp Gain: </strong> <span>{{item.expGain}}</span></div>
             </div>
 
-          </div>
+            <div class="cell space">
+              <button [disabled]="checkItems(item.id)" class="button primary" (click)="purchaseItem(item.cost, item.id)">Purchase {{item.name}}</button>
+            </div>
 
-          <div class="cell space">
-            <button [disabled]="checkItems(item.id)" class="button primary" (click)="purchaseItem(item.cost, item.id)">Purchase {{item.name}}</button>
           </div>
 
         </div>
-
       </div>
+
     </div>
 
   </div>

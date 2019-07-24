@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 import { Animal } from "./animals";
 import { AnimalsService } from "../animals.service";
+import {MagicEngineComponent} from "../magic-engine/magic-engine.component";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-animal-engine',
@@ -11,9 +13,12 @@ import { AnimalsService } from "../animals.service";
 export class AnimalEngineComponent implements OnInit {
 
   animals: Animal[] = [];
+  id: any = 0;
 
   constructor(
-      private animalService: AnimalsService
+      private animalService: AnimalsService,
+      private magicEngine: MagicEngineComponent,
+      private route: ActivatedRoute
   ) { }
 
   public getAnimals(): void{
@@ -33,9 +38,16 @@ export class AnimalEngineComponent implements OnInit {
     return currentAnimalvl.toString();
   }
 
+  createAllMagic(){
+
+    this.magicEngine.createMagic();
+
+  }
+
   ngOnInit() {
     this.getAnimals();
     this.getCurrentAnimal();
+    this.id = this.route.snapshot.paramMap.get("id");
   }
 
 }

@@ -24,6 +24,10 @@
     }
 }
 
+.hidden{
+    display:none;
+}
+
 // Spacing -------------------------------------------------------------------------------------------------------------
 
 .padding-y {
@@ -75,18 +79,105 @@
         }
     }
 
+    &.magic-button{
+        position:relative;
+        width:80%;
+        padding: .55em 0.5em;
+    }
+
+}
+
+//Global Icon Styling --------------------------------------------------------------------------------------------------
+
+.magic-icon {
+    position: relative;
+    width:30px;
+    bottom: 2px;
+
+    &.xs{
+        width: 23px;
+    }
+}
+
+.min-icon {
+    position: relative;
+    width:30px;
+    bottom: 2px;
+
+    &.xs{
+        width: 23px;
+    }
+}
+
+//Reward Container -----------------------------------------------------------------------------------------------------
+
+.stat-container{
+    padding:5px 0;
+
+    .stat-box{
+
+        background-color: lighten($color-gray, 40%);
+        font-size:10pt;
+        width:100%;
+        border-radius:5px;
+        margin:auto;
+
+        .stat-item{
+            display:inline-block;
+            padding: 5px 5px;
+            color:$color-primary;
+            img{
+                width:20px;
+            }
+        }
+    }
+}
+
+.req-container{
+    padding:5px 0;
+
+    .req-box{
+
+        background-color: lighten($color-gray, 40%);
+        font-size:8pt;
+        width:100%;
+        border-radius:5px;
+        margin:auto;
+
+        .req-item{
+            display:inline-block;
+            padding: 5px 5px;
+            color:$color-primary;
+
+            img{
+                width:15px;
+            }
+        }
+    }
+}
+
+
+.material-icons{
+    font-size: 14px;
+    bottom: 7px;
+    position: relative;
+}
+
+.mat-tab-header {
+    margin-bottom: 25px;
+}
+
+.tooltip-red {
+    background: #b71c1c;
+    font-size:12px;
+}
+
+.mat-tab-group {
+    margin-bottom: 48px;
 }
 
 .details{
     font-size:$font-small;
-}
-
-progress{
-
-    @include progress-container;
-    @include foundation-progress-bar;
-    position: relative;
-    width:100%;
 }
 
 .animal-card{
@@ -97,5 +188,11 @@ progress{
 
     max-width: 300px;
     margin: 0 auto;
+}
+
+.card-container {
+
+    background-color: white;
+    border-radius: 5px;
 }
 

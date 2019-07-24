@@ -1,0 +1,9 @@
+<div *ngFor="let animal of animals" [className]="animal.evolve ? 'cell' : 'hide cell'" class="grid-x">
+
+  <div *ngIf="animal.selected === true" class="cell text-center">
+
+    <button class="primary button" (click)="evolveAnimal()"> Evolve</button>
+
+  </div>
+
+</div>

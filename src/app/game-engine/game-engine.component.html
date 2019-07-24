@@ -1,38 +1,69 @@
 <!--- This is the general game content block ---->
+
 <div class="grid-container full">
-<app-save-load></app-save-load>
+  <div class="grid-x">
+      <div class="cell">
+        <app-save-load></app-save-load>
+      </div>
+  </div>
+
 </div>
+
 <div class="grid-container full">
-  <div class="grid-x grid-padding-x padding-y medium-up-2">
+  <div class="grid-x grid-padding-x">
 
-    <div class="cell activities-wall ">
+    <div class="cell medium-5 activities-wall">
 
-      <mat-tab-group>
-        <mat-tab label="One">
-          <app-activities-engine></app-activities-engine>
-        </mat-tab>
-        <mat-tab label="Two">
+      <div class="magic-count"><app-magic-engine></app-magic-engine></div>
+
+      <div class="tab-group">
+        <mat-tab-group>
+
+          <mat-tab>
+            <ng-template mat-tab-label>
+              Caretakers
+              <i class="material-icons md-18"
+                 matTooltip="These are Animal Activities, use these to get more magic and too help upgrade Skills"
+                 matTooltipPosition="above"
+                 matTooltipClass="tooltip-red"
+              >info</i>
+            </ng-template>
+            <app-caretaker-engine></app-caretaker-engine>
+          </mat-tab>
+
+          <mat-tab>
+            <ng-template mat-tab-label>
+              Activities
+              <i class="material-icons md-18"
+                 matTooltip="These are Animal Activities, use these to get more magic and too help upgrade Skills"
+                 matTooltipPosition="above"
+                 matTooltipClass="tooltip-red"
+              >info</i>
+            </ng-template>
+            <app-activities-engine></app-activities-engine>
+          </mat-tab>
+
+        <mat-tab>
+          <ng-template mat-tab-label>
+            Items
+            <i class="material-icons md-18"
+               matTooltip="These Items to help imporove your Animals Skills so they can run activites"
+               matTooltipPosition="above"
+               matTooltipClass="tooltip-red"
+            >info</i>
+          </ng-template>
           <app-wonderland-engine></app-wonderland-engine>
         </mat-tab>
-      </mat-tab-group>
+
+        </mat-tab-group>
+      </div>
 
     </div>
 
-    <div class="cell animal-wall">
-      <div class="grid-x grid-margin-y">
-        <div class="cell animal-wall-section">
-          <app-animal-engine></app-animal-engine>
-        </div>
-        <div class="cell magic-wall-section">
-          <app-magic-engine></app-magic-engine>
-          <div class="cell text-center button-container">
-            <div class="cell" >
-              <button id="magicButton" (click)="createAllMagic()" class="button primary">Make Magic</button>
-            </div>
-          </div>
+    <div class="cell medium-7 animal-wall">
 
-        </div>
-      </div>
+        <app-animal-engine></app-animal-engine>
+
     </div>
 
   </div>

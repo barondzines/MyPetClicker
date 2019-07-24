@@ -6,7 +6,7 @@
 @mixin progress-container {
     height: $progress-height;
     margin-bottom: $progress-margin-bottom;
-    border-radius: $progress-radius;
+    border-radius: 10px;
     background-color: $progress-background;
 }
 

@@ -1,0 +1,37 @@
+<div class="grid-container">
+    <div class="grid-x grid-margin-y grid-padding-x grid-padding-y" *ngFor="let caretaker of caretakers">
+
+        <div class="cell caretaker-block">
+
+          <div class="grid-x grid-padding-x">
+
+            <div class="cell medium-3 caretaker-img">
+              <img [src]="caretaker.img" alt="{{caretaker.name}}-image">
+              <span class="caretaker-lvl">{{caretaker.lvl}}</span>
+            </div>
+
+            <div class="cell medium-5 caretaker-details">
+
+              <div class="mat-subheading-2">{{caretaker.name}}</div>
+              <div class="caretaker-desc">{{caretaker.description}}</div>
+              <div class="caretaker-bonus">
+              <div class="subhead">Bonus:</div>
+                <div *ngIf="caretaker.beauty > 0 ">Beauty: +{{caretaker.beauty}}</div>
+                <div *ngIf="caretaker.str > 0 ">Strength: +{{caretaker.str}}</div>
+                <div *ngIf="caretaker.intelligence > 0 ">Intelligence: +{{caretaker.intelligence}}</div>
+                <div *ngIf="caretaker.speed > 0 ">Speed: +{{caretaker.speed}}</div>
+                <div *ngIf="caretaker.happiness > 0 ">Happiness: +{{caretaker.happiness}}</div>
+              </div>
+
+            </div>
+
+            <div class="cell medium-4 align-self-middle caretaker-button">
+              <button [disabled]="checkCaretakers(caretaker.id)" class="button primary" (click)="purchaseCaretaker(caretaker.id)">Upgrade {{caretaker.cost}} <img class="magic-icon" src="./assets/magic-icon.png" alt="magic-icon"></button>
+            </div>
+
+          </div>
+
+        </div>
+
+    </div>
+</div>

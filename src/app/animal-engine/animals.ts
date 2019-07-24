@@ -6,6 +6,7 @@ export class Animal {
     name: string;
     description: string;
     age: number = 0;
+    evolveLvl: number = 0;
     experienceNeeded: number = 0;
     currentExperience: number = 0;
     speed: number = 0;
@@ -15,8 +16,10 @@ export class Animal {
     happiness: number = 0;
     upgradeCost: number = 0;
     lvl: number = 0;
+    currentLvl: number = 0;
     img: string;
     icon: string;
     selected: boolean;
+    evolve: boolean;
 
 }

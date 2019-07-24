@@ -345,6 +345,7 @@ export class ActivitiesEngineComponent implements OnInit {
                 this.animals[i].experienceNeeded = upgradedXp;
                 this.animals[i].currentExperience = 0;
 
+
             }
 
         }
@@ -356,7 +357,7 @@ export class ActivitiesEngineComponent implements OnInit {
         this.getActivities();
         this.getAnimals();
 
-        this.id = this.route.snapshot.paramMap.get("id")
+        this.id = this.route.snapshot.paramMap.get("id");
 
     }
 

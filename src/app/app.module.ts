@@ -12,11 +12,16 @@ import { ActivitiesService} from "./activites.service";
 import { GameEngineComponent } from './game-engine/game-engine.component';
 import { SaveLoadComponent } from './save-load/save-load.component';
 import { AnimalSelectComponent } from './animal-select/animal-select.component';
+import { CaretakerEngineComponent } from './caretaker-engine/caretaker-engine.component';
+import { EvolveEngineComponent } from './evolve-engine/evolve-engine.component';
+
 import {RouterModule, Routes} from "@angular/router";
 
 import {ProgressBar, ProgressBarModule} from "ngx-progress-bar";
 import { MaterialModule } from "./material/material.module";
 import {MatCardModule} from "@angular/material";
+import {EvolveService} from "./evolve.service";
+import {AnimalsService} from "./animals.service";
 
 
 const appRoutes: Routes =[
@@ -43,6 +48,8 @@ const appRoutes: Routes =[
     AnimalEngineComponent,
     SaveLoadComponent,
     AnimalSelectComponent,
+    CaretakerEngineComponent,
+    EvolveEngineComponent,
 
   ],
     imports: [
@@ -57,7 +64,20 @@ const appRoutes: Routes =[
         MatCardModule
 
     ],
-  providers: [MagicCountService, ActivitiesService,MagicEngineComponent,  WonderlandEngineComponent, AnimalEngineComponent, GameEngineComponent,SaveLoadComponent],
+  providers: [
+
+      MagicCountService,
+      ActivitiesService,
+      EvolveService,
+      AnimalsService,
+      MagicEngineComponent,
+      WonderlandEngineComponent,
+      AnimalEngineComponent,
+      GameEngineComponent,
+      SaveLoadComponent,
+      EvolveEngineComponent
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,38 @@
+.animal-container {
+    min-height:600px;
+
+    .animal-details {
+        list-style: none;
+        text-align: center;
+        background-color: lighten($color-gray, 30%);
+        margin: 10px auto;
+        padding: 10px;
+        border-radius: 5px;
+        width: 45%;
+
+        .animal-stat {
+            color: $color-primary;
+            display: inline-block;
+            padding-right: 25px;
+        }
+    }
+
+    .animal-name-lvl {
+        .animal-lvl {
+
+            display: inline;
+            padding-right: 25px;
+        }
+
+        .animal-name {
+            display: inline;
+        }
+    }
+
+    .animal-img{
+        min-height: 400px;
+        position: relative;
+        margin: auto;
+        top: 100px;
+    }
+}

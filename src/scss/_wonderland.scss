@@ -1,0 +1,47 @@
+.item-block{
+
+    background-color: #fff;
+
+    .item-img{
+
+        position:relative;
+
+        img{
+
+            width: 120px;
+        }
+
+        .item-lvl{
+            text-align:center;
+            position:absolute;
+            background: $color-primary;
+            color: #fff;
+            border-radius: 150px;
+            width: 25px;
+            height: 25px;
+            top: 0;
+            left: 67%;
+            font-size: 15px;
+            border: 1px solid #000;
+        }
+    }
+
+    .item-reward-container{
+
+        display:block;
+        background-color: lighten($color-gray, 30%);
+        border-radius: 5px;
+        padding:5px;
+
+        .item-reward{
+
+            display:inline;
+            padding-right:10px;
+
+            img{
+                width:35px;
+            }
+        }
+    }
+
+}

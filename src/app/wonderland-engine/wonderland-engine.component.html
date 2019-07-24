@@ -1,43 +1,40 @@
 <div class="grid-container">
 
-  <div class="mat-headline">Animal Items</div>
-
-  <div  class="grid-x padding-y">
+  <div  class="grid-x grid-margin-y">
 
     <div class="cell" *ngFor="let item of items">
 
-      <div class="grid-x grid-margin-x grid-padding-x grid-padding-y">
+      <div class="grid-x align-middle grid-margin-x grid-padding-x grid-padding-y">
 
-        <div class="cell item-card-container">
+        <div class="cell item-block">
           <div class="grid-x">
-            <h6>{{item.name}}</h6>
-            <div class="cell">{{item.description}}</div>
 
-            <div class="cell">
 
-              <div class="grid-x small-up-3">
-                <div class="cell"><strong>Cost:</strong><span id="{{item.name}}-item-cost">{{item.cost}}</span> </div>
-                <div class="cell"><strong>Count:</strong> <span id="{{item.name}}-item-count">{{item.count}}</span></div>
-                <div class="cell"><strong>Lvl:</strong> <span id="{{item.name}}-item-lvl">{{item.lvl}}</span></div>
-              </div>
+            <div class="cell medium-3 item-img">
+              <img [src]="item.img" alt="{{item.name}}-img">
+              <span class="item-lvl" id="{{item.name}}-item-count">{{item.count}}</span>
+            </div>
+
+            <div class="cell medium-5">
+
+                <div class="item-lvl">Lvl: <span id="{{item.name}}-item-lvl">{{item.lvl}}</span></div>
+                <div class="subhead lg">{{item.name}}</div>
+                <div class="item-desc"></div>{{item.description}}
+                <div class="subhead">Rewards:</div>
+                <div class="grid-x align-center item-reward-container">
+                  <div *ngIf="item.strUpgrade > 0" class="cell text-center item-reward" ><img class="min-icon" src="./assets/strength-icon.png" alt="strength-icon">  +<span id="{{item.name}}-item-str">{{item.strUpgrade}}</span></div>
+                  <div *ngIf="item.beautyUpgrade > 0" class="cell text-center item-reward"><img class="min-icon" src="./assets/beauty-icon.png" alt="beauty-icon">  +<span id="{{item.name}}-item-beauty">{{item.beautyUpgrade}}</span></div>
+                  <div *ngIf="item.intUpgrade > 0" class="cell text-center item-reward"><img class="min-icon" src="./assets/intelligence-icon.png" alt="intelligence-icon">  +<span id="{{item.name}}-item-int">{{item.intUpgrade}}</span></div>
+                  <div *ngIf="item.speedUpgrade > 0" class="cell text-center item-reward"><img class="min-icon" src="./assets/speed-icon.png" alt="speed-icon"> +<span id="{{item.name}}-item-speed">{{item.speedUpgrade}}</span></div>
+                  <div *ngIf="item.expGain > 0" class="cell text-center item-reward"><img class="min-icon" src="./assets/xp-icon.png" alt="xp-icon"><span>{{item.expGain}}</span></div>
+                </div>
 
             </div>
 
-            <div class="cell">
+            <div class="cell text-center align-self-middle medium-4">
 
-              <h5 class="space">Skill Bonus:</h5>
-              <div class="grid-x small-up-5 align-center align-middle details">
-                <div class="cell"><strong>Strength: </strong> +<span id="{{item.name}}-item-str">{{item.strUpgrade}}</span></div>
-                <div class="cell"><strong>Beauty: </strong> +<span id="{{item.name}}-item-beauty">{{item.beautyUpgrade}}</span></div>
-                <div class="cell"><strong>Int: </strong> +<span id="{{item.name}}-item-int">{{item.intUpgrade}}</span></div>
-                <div class="cell"><strong>Speed: </strong> +<span id="{{item.name}}-item-speed">{{item.speedUpgrade}}</span></div>
-                <div class="cell"><strong>Exp Gain: </strong> <span>{{item.expGain}}</span></div>
-              </div>
+              <button [disabled]="checkItems(item.id)" class="button primary" (click)="purchaseItem(item.cost, item.id)">{{item.name}} <span id="{{item.name}}-item-cost">{{item.cost}}<img class="magic-icon" src="./assets/magic-icon.png" alt="magic-icon"></span></button>
 
-            </div>
-
-            <div class="cell space">
-              <button [disabled]="checkItems(item.id)" class="button primary" (click)="purchaseItem(item.cost, item.id)">Purchase {{item.name}}</button>
             </div>
 
           </div>

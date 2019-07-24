@@ -4,7 +4,9 @@ html {
 	font-size: 16px;
 	font-family: $font-body;
 	color: $font-color;
+	background-color: #f1f1f1;
 }
+
 
 h1, .h1,
 h2, .h2,
@@ -48,4 +50,13 @@ h5, .h5 {
 
 h6, .h6 {
 	font-size: 1rem;
+}
+
+.subhead{
+	font-size: 0.8rem;
+	font-weight:800;
+
+	&.lg{
+		font-size: 1.2rem;
+	}
 }

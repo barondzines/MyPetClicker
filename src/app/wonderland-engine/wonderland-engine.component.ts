@@ -6,6 +6,9 @@ import { map } from "rxjs/operators";
 import {Animal} from "../animal-engine/animals";
 import {AnimalEngineComponent} from "../animal-engine/animal-engine.component";
 import {AnimalsService} from "../animals.service";
+import {EvolveEngineComponent} from "../evolve-engine/evolve-engine.component";
+import {EvolveService} from "../evolve.service";
+import {Evolve} from "../evolve-engine/evolve";
 
 @Component({
   selector: 'app-wonderland-engine',
@@ -16,6 +19,7 @@ export class WonderlandEngineComponent implements OnInit {
 
   items: Items[] = [];
   animals: Animal[] = [];
+  evolve: Evolve[] = [];
 
   totalMps = 0;
 
@@ -24,6 +28,8 @@ export class WonderlandEngineComponent implements OnInit {
       private magicEngine: MagicEngineComponent,
       private animalEngine: AnimalEngineComponent,
       private animalService: AnimalsService,
+      private evolveEngine: EvolveEngineComponent,
+      private evolveService: EvolveService
 
   ) { }
 
@@ -35,6 +41,11 @@ export class WonderlandEngineComponent implements OnInit {
   public getAnimals(): void{
     this.animalService.getAnimals()
         .subscribe(animals => this.animals = animals);
+  }
+
+  public getEvolveLevels(): void {
+    this.evolveService.getEvolveLevels()
+        .subscribe(evolve => this.evolve = evolve )
   }
 
   purchaseItem(cost, id) {
@@ -50,7 +61,7 @@ export class WonderlandEngineComponent implements OnInit {
       this.updateAnimal(id);
       this.updateAnimalExp(id);
       setTimeout(() =>
-          this.levelUpAnimal(), 1500);
+          this.levelUpAnimal(id), 1500);
 
 
     } else {
@@ -79,6 +90,20 @@ export class WonderlandEngineComponent implements OnInit {
   }
 
   public getCurrentAnimallvl() {
+    //TODO: create a check for active animal currently there is only 1 animal
+
+    let currentAnimal = Number(document.getElementById('animal-id').innerHTML);
+
+    for (let i = 0; i < this.animals.length; i++) {
+      if (this.animals[i].id == currentAnimal) {
+        return this.animals[i].lvl;
+
+      }
+    }
+
+  }
+
+  public getAnimallvl() {
     //TODO: create a check for active animal currently there is only 1 animal
 
     let currentAnimalvl = this.animals.filter((item: any) => {
@@ -170,6 +195,7 @@ export class WonderlandEngineComponent implements OnInit {
 
     this.getItems();
     this.getAnimals();
+    this.getEvolveLevels();
 
   }
 
@@ -241,7 +267,7 @@ export class WonderlandEngineComponent implements OnInit {
 
   }
 
-  levelUpAnimal(){
+  levelUpAnimal(id){
 
     let animalId = Number(document.getElementById('animal-id').innerHTML);
     let currentXp = Number(document.getElementById('current-xp').innerHTML);
@@ -258,13 +284,13 @@ export class WonderlandEngineComponent implements OnInit {
         this.animals[i].lvl++;
         this.animals[i].experienceNeeded = upgradedXp;
         this.animals[i].currentExperience = 0;
+        this.evolveAnimal();
 
       }
 
     }
 
   }
-
 
 
   updateItem(id){
@@ -277,7 +303,47 @@ export class WonderlandEngineComponent implements OnInit {
     }
   }
 
+  public getEvolveLvl() {
+    //TODO: create a check for active animal currently there is only 1 animal
 
+    for (let i = 0; i < this.evolve.length; i++) {
+      if (this.evolve[i].level > 0) {
+        return this.evolve[i].level;
+
+      }
+    }
+
+  }
+
+
+
+  evolveAnimal() {
+
+    let animalid = Number(document.getElementById('animal-id').innerHTML);
+
+    let animalLvl = Number(this.getCurrentAnimallvl());
+
+    let evolveLevel = Number(this.getEvolveLvl());
+
+    console.log('Evolve Function', evolveLevel);
+
+    for (let i=0; i < this.animals.length; i++){
+
+      if(evolveLevel <= this.animals[i].lvl) {
+
+        console.log('Animal Evolved', animalLvl);
+
+
+        this.animals[i].lvl++;
+
+        //change animal exp to new value
+        //change current evolve level to match for picture
+        //set animal evolve level to be calculation
+
+      }
+    }
+
+  }
 
 
 }

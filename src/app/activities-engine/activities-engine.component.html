@@ -1,36 +1,49 @@
 <div class="grid-container">
+<div  class="grid-x medium-up-3 grid-margin-x grid-margin-y grid-padding-x grid-padding-y">
 
-
-<div class="mat-headline">Animal Activities</div>
-<div  class="grid-x grid-margin-x grid-padding-x grid-padding-y">
-
-    <div class="cell" *ngFor="let activity of activities">
+    <div class="cell card-container" *ngFor="let activity of activities">
 
         <div class="grid-x">
 
-            <div id="{{activity.id}}" class="cell"><strong><span id="activity-name">{{activity.name}}</span></strong></div>
-
-            <div class="cell">
-
-                <strong>Minimum Stats Needed</strong>
-                <div class="grid-x small-up-4">
-                    <div class="cell"><strong>Strength: </strong><span id="{{activity.name}}-activity-str"></span>{{activity.str}}</div>
-                    <div class="cell"><strong>Beauty: </strong><span id="{{activity.name}}-activity-beauty"></span>{{activity.beauty}}</div>
-                    <div class="cell"><strong>Intelligence: </strong><span id="{{activity.name}}-activity-int"></span>{{activity.intelligence}}</div>
-                    <div class="cell"><strong>Speed: </strong><span id="{{activity.name}}-activity-speed"></span>{{activity.speed}}</div>
+            <div class="cell text-center activity-icon-container">
+                <span class="activity-count" id="{{activity.name}}-activity-count">{{activity.count}}</span>
+                <div class="activity-icon">
+                    <img [src]="activity.img" alt="activity.{{activity.name}}">
+                </div>
             </div>
 
-            <div class="cell">
+            <div class="cell text-center">
 
-                <strong class="space">Details</strong>
-                <div class="grid-x small-up-5 details">
-                    <div class="cell"><strong>Lvl: </strong><span id="{{activity.name}}-activity-lvl"></span>{{activity.lvl}}</div>
-                    <div class="cell"><strong>Cost: </strong><span id="{{activity.name}}-activity-cost"></span>{{activity.cost}}</div>
-                    <div class="cell"><strong>Count: </strong><span id="{{activity.name}}-activity-count"></span>{{activity.count}}</div>
-                    <div class="cell"><strong>Reward: </strong><span id="{{activity.name}}-activity-reward"></span>{{activity.reward}}</div>
-                    <div class="cell"><strong>Exp Gain: </strong><span>{{activity.expGain}}</span></div>
+                <div class="grid-x align-middle align-center">
+                    <div class="cell shrink">
+                        <span class="level-flag" id="{{activity.name}}-activity-lvl">
+                            Lvl. {{activity.lvl}}
+                        </span>
+                        <div id="{{activity.id}}"><strong><span class="activity-name" id="activity-name"> {{activity.name}}</span></strong></div>
+                    </div>
+
                 </div>
 
+                <div class="stat-container">
+                    <div class="stat-title">Rewards</div>
+                    <div class="stat-box">
+                        <div class="stat-item"><span id="{{activity.name}}-activity-reward"></span>{{activity.reward}} <img class="magic-icon" src="./assets/magic-icon.png" alt="magic-icon xs"></div>
+                        <div class="stat-item"><span>{{activity.expGain}}</span> <img class="reward-icon" src="./assets/xp-icon.png" alt="magic-icon"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="cell text-center">
+             <div class="req-container">
+                 <div class="req-title">Requirements</div>
+                <div class="req-box">
+                    <div class="req-item"><img class="min-icon" src="./assets/strength-icon.png" alt="strength-icon"><span id="{{activity.name}}-activity-str"></span>{{activity.str}}</div>
+                    <div class="req-item"><img class="min-icon" src="./assets/beauty-icon.png" alt="beauty-icon"> <span id="{{activity.name}}-activity-beauty"></span>{{activity.beauty}}</div>
+                    <div class="req-item"><img class="min-icon" src="./assets/intelligence-icon.png" alt="intelligence-icon"> <span id="{{activity.name}}-activity-int"></span>{{activity.intelligence}}</div>
+                    <div class="req-item"><img class="min-icon" src="./assets/speed-icon.png" alt="speed-icon"> <span id="{{activity.name}}-activity-speed"></span>{{activity.speed}}</div>
+                </div>
+            </div>
             </div>
 
             <div class="cell">
@@ -39,7 +52,10 @@
 
             </div>
 
-            <div class="cell space"><button [disabled]="checkActivities(activity.id)" class="button primary" (click)="purchaseActivity(activity.cost, activity.id)">Enter {{activity.name}}</button></div>
+            <div class="cell text-center align-self-middle space magic-button">
+                <button [disabled]="checkActivities(activity.id)" class="button primary magic-button" (click)="purchaseActivity(activity.cost, activity.id)">
+                    {{activity.cost}}<img class="magic-icon" src="./assets/magic-icon.png" alt="magic-icon"></button>
+            </div>
 
         </div>
 

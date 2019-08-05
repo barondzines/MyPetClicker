@@ -14,6 +14,7 @@ export class MagicEngineComponent implements OnInit {
   public getMagic() {
 
     return this.magicCount.count;
+
   }
 
   public createMagic(){
@@ -29,7 +30,9 @@ export class MagicEngineComponent implements OnInit {
   }
 
   public updateMagic(magic) {
+
     this.magicCount.count = magic;
+
   }
 
   ngOnInit() {

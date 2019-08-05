@@ -1,17 +1,17 @@
 // Color (Red: #b5121b, Blue: #2081be, Green: #6c9f2e, Yellow: #ff9b00) ------------------------------------------------
-$color-primary: #6b22c3;
+$color-primary: #289D8F;
 $color-primary-light: lighten($color-primary, 5%);
 $color-primary-dark: darken($color-primary, 10%);
 
-$color-secondary: #1c9ad6;
+$color-secondary: #F4A261;
 $color-secondary-light: lighten($color-secondary, 5%);
 $color-secondary-dark: darken($color-secondary, 10%);
 
-$color-tertiary: #ed1e83;
+$color-tertiary: #EAC46A;
 $color-tertiary-light: lighten($color-tertiary, 5%);
 $color-tertiary-dark: darken($color-tertiary, 10%);
 
-$color-quaternary: #001845;
+$color-quaternary: #284653;
 $color-quaternary-light: lighten($color-quaternary, 5%);
 $color-quaternary-dark: darken($color-quaternary, 10%);
 
@@ -27,7 +27,7 @@ $color-gray: #888888;
 $color-gray-light: lighten($color-gray, 10%);
 $color-gray-dark: darken($color-gray, 10%);
 
-$color-white: #ffffff;
+$color-white: #F3F8F7;
 $color-white-dark: darken($color-white, 10%);
 
 $color-black: #000000;
@@ -43,8 +43,8 @@ $shadow-down: 0 2px 3px rgba(0,0,0,.3);
 
 // Typography ----------------------------------------------------------------------------------------------------------
 $font-awesome: 'Font Awesome 5 Pro';
-$font-headline: 'Vollkorn', serif;
-$font-body: 'Vollkorn', serif;
+$font-headline: 'Fjalla One', sans-serif;
+$font-body: 'Fjalla One', sans-serif;
 $font-color: $color-quaternary;
 $font-size: 16px;
 $font-small: 12px;

@@ -3,12 +3,6 @@ import { Evolve } from "../evolve-engine/evolve";
 export const EVOLVE: Evolve[] = [
 
     {
-        id: 1,
-        level: 2,
-        exp: 0
-    },
-
-    {
         id: 2,
         level: 5,
         exp: 1000

@@ -329,12 +329,11 @@ export class WonderlandEngineComponent implements OnInit {
 
     for (let i=0; i < this.animals.length; i++){
 
-      if(evolveLevel <= this.animals[i].lvl) {
+      if(evolveLevel === this.animals[i].lvl) {
 
         console.log('Animal Evolved', animalLvl);
 
-
-        this.animals[i].lvl++;
+        this.animals[i].evolveLvl++;
 
         //change animal exp to new value
         //change current evolve level to match for picture

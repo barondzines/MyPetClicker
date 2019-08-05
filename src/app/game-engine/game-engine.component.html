@@ -1,7 +1,10 @@
 <!--- This is the general game content block ---->
 
 <div class="grid-container full">
-  <div class="grid-x">
+  <div class="grid-x grid-padding-x medium-up-2">
+    <div class="cell game-logo">
+      <img src="../../assets/pet_logo.png">
+    </div>
       <div class="cell">
         <app-save-load></app-save-load>
       </div>
@@ -14,48 +17,56 @@
 
     <div class="cell medium-5 activities-wall">
 
-      <div class="magic-count"><app-magic-engine></app-magic-engine></div>
+      <div class="grid-x grid-padding-y">
 
-      <div class="tab-group">
-        <mat-tab-group>
+          <div class="cell">
+            <div class="magic-count"><app-magic-engine></app-magic-engine></div>
+          </div>
 
-          <mat-tab>
-            <ng-template mat-tab-label>
-              Caretakers
-              <i class="material-icons md-18"
-                 matTooltip="These are Animal Activities, use these to get more magic and too help upgrade Skills"
-                 matTooltipPosition="above"
-                 matTooltipClass="tooltip-red"
-              >info</i>
-            </ng-template>
-            <app-caretaker-engine></app-caretaker-engine>
-          </mat-tab>
+        <div class="cell tab-group">
 
-          <mat-tab>
-            <ng-template mat-tab-label>
-              Activities
-              <i class="material-icons md-18"
-                 matTooltip="These are Animal Activities, use these to get more magic and too help upgrade Skills"
-                 matTooltipPosition="above"
-                 matTooltipClass="tooltip-red"
-              >info</i>
-            </ng-template>
-            <app-activities-engine></app-activities-engine>
-          </mat-tab>
+          <mat-tab-group>
 
-        <mat-tab>
-          <ng-template mat-tab-label>
-            Items
-            <i class="material-icons md-18"
-               matTooltip="These Items to help imporove your Animals Skills so they can run activites"
-               matTooltipPosition="above"
-               matTooltipClass="tooltip-red"
-            >info</i>
-          </ng-template>
-          <app-wonderland-engine></app-wonderland-engine>
-        </mat-tab>
+            <mat-tab>
+              <ng-template mat-tab-label>
+                Caretakers
+                <i class="material-icons md-18"
+                   matTooltip="These are Animal Activities, use these to get more magic and too help upgrade Skills"
+                   matTooltipPosition="above"
+                   matTooltipClass="tooltip-red"
+                >info</i>
+              </ng-template>
+              <app-caretaker-engine></app-caretaker-engine>
+            </mat-tab>
 
-        </mat-tab-group>
+            <mat-tab>
+              <ng-template mat-tab-label>
+                Activities
+                <i class="material-icons md-18"
+                   matTooltip="These are Animal Activities, use these to get more magic and too help upgrade Skills"
+                   matTooltipPosition="above"
+                   matTooltipClass="tooltip-red"
+                >info</i>
+              </ng-template>
+              <app-activities-engine></app-activities-engine>
+            </mat-tab>
+
+            <mat-tab>
+              <ng-template mat-tab-label>
+                Items
+                <i class="material-icons md-18"
+                   matTooltip="These Items to help imporove your Animals Skills so they can run activites"
+                   matTooltipPosition="above"
+                   matTooltipClass="tooltip-red"
+                >info</i>
+              </ng-template>
+              <app-wonderland-engine></app-wonderland-engine>
+            </mat-tab>
+
+          </mat-tab-group>
+
+        </div>
+
       </div>
 
     </div>

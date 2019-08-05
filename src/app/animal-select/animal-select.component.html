@@ -1,9 +1,13 @@
 <!--- This is the animal select HTML Object ---->
-
+<div class="grid-container full">
+    <div class="grid-x grid-padding-x align-center">
+        <div class="cell text-center game-logo home">
+            <img src="../../assets/pet_logo.png">
+        </div>
+    </div>
+</div>
 
 <div class="grid-container">
-
-    <h2 class="text-center padding-y">Animal Select</h2>
 
     <div class="grid-x small-up-5 grid-padding-x">
 
@@ -18,7 +22,7 @@
                 </div>
 
                 <div class="cell spacing">
-                    <button mat-raised-button (click)="selectedAnimal(animal.id)" [routerLink]="['/game', animal.id]"> Select {{animal.name}}</button>
+                    <button class="button primary" (click)="selectedAnimal(animal.id)" [routerLink]="['/game', animal.id]"> Select {{animal.name}}</button>
                 </div>
 
             </div>

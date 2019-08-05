@@ -1,3 +1,22 @@
+.texture{
+
+    background-image: url(assets/webdecorations/circles-light.png);
+    background-repeat: repeat;
+    background: rgb(6,118,122);
+    background: -moz-linear-gradient(0deg, rgba(6,118,122,1) 7%, rgba(58,183,201,1) 30%, rgba(255,255,255,1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(6,118,122,1) 7%, rgba(58,183,201,1) 30%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(0deg, rgba(6,118,122,1) 7%, rgba(58,183,201,1) 30%, rgba(255,255,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#06767a",endColorstr="#ffffff",GradientType=1);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+
+
 .bar {
 
     height: 20px; /* Can be anything */
@@ -55,12 +74,12 @@
 
 .button{
 
-    background-color: $color-primary;
+    background-color: $color-primary !important;
 
     &.primary {
 
         border-radius:15px;
-        background-color: $color-primary;
+        background-color: $color-primary !important;
 
         &:hover{
             background-color: darken($color-primary, 10%);
@@ -156,6 +175,18 @@
     }
 }
 
+.game-logo{
+    img {
+        width: 150px;
+    }
+
+    &.home{
+        img{
+            width: 300px;
+
+        }
+    }
+}
 
 .material-icons{
     font-size: 14px;

@@ -1,5 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
 @import url(~@angular/material/prebuilt-themes/indigo-pink.css);
+.texture {
+  background-image: url(assets/webdecorations/circles-light.png);
+  background-repeat: repeat;
+  background: #06767a;
+  background: -moz-linear-gradient(0deg, #06767a 7%, #3ab7c9 30%, white 100%);
+  background: -webkit-linear-gradient(0deg, #06767a 7%, #3ab7c9 30%, white 100%);
+  background: linear-gradient(0deg, #06767a 7%, #3ab7c9 30%, white 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#06767a",endColorstr="#ffffff",GradientType=1);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0; }
+
 .bar {
   height: 20px;
   /* Can be anything */
@@ -41,19 +56,19 @@
   padding-bottom: 0.2rem; }
 
 .button {
-  background-color: #6b22c3; }
+  background-color: #289D8F !important; }
   .button.primary {
     border-radius: 15px;
-    background-color: #6b22c3; }
+    background-color: #289D8F !important; }
     .button.primary:hover {
-      background-color: #531a98; }
+      background-color: #1e746a; }
     .button.primary:focus {
       outline: none;
-      background-color: #531a98; }
+      background-color: #1e746a; }
     .button.primary:disabled {
-      background-color: #531a98; }
+      background-color: #1e746a; }
       .button.primary:disabled:hover {
-        background-color: #531a98; }
+        background-color: #1e746a; }
   .button.magic-button {
     position: relative;
     width: 80%;
@@ -84,7 +99,7 @@
     .stat-container .stat-box .stat-item {
       display: inline-block;
       padding: 5px 5px;
-      color: #6b22c3; }
+      color: #289D8F; }
       .stat-container .stat-box .stat-item img {
         width: 20px; }
 
@@ -99,9 +114,14 @@
     .req-container .req-box .req-item {
       display: inline-block;
       padding: 5px 5px;
-      color: #6b22c3; }
+      color: #289D8F; }
       .req-container .req-box .req-item img {
         width: 15px; }
+
+.game-logo img {
+  width: 150px; }
+.game-logo.home img {
+  width: 300px; }
 
 .material-icons {
   font-size: 14px;
@@ -135,8 +155,8 @@
 body,
 html {
   font-size: 16px;
-  font-family: "Vollkorn", serif;
-  color: #001845;
+  font-family: "Fjalla One", sans-serif;
+  color: #284653;
   background-color: #f1f1f1; }
 
 h1, .h1,
@@ -145,7 +165,7 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  font-family: "Vollkorn", serif;
+  font-family: "Fjalla One", sans-serif;
   margin-bottom: 0.6rem;
   font-weight: bold;
   line-height: 100%; }
@@ -214,7 +234,7 @@ h6, .h6 {
 
 progress {
   border-radius: 10px !important;
-  background-color: #6b22c3 !important;
+  background-color: #289D8F !important;
   height: 1.2rem;
   margin: 0 auto;
   position: relative;
@@ -246,7 +266,7 @@ progress {
     width: 50%; }
   .activity-icon-container .activity-count {
     position: absolute;
-    background: #6b22c3;
+    background: #289D8F;
     color: #fff;
     border-radius: 150px;
     width: 25px;
@@ -271,7 +291,7 @@ progress {
     .caretaker-block .caretaker-img .caretaker-lvl {
       text-align: center;
       position: absolute;
-      background: #6b22c3;
+      background: #289D8F;
       color: #fff;
       border-radius: 150px;
       width: 25px;
@@ -290,7 +310,7 @@ progress {
     .item-block .item-img .item-lvl {
       text-align: center;
       position: absolute;
-      background: #6b22c3;
+      background: #289D8F;
       color: #fff;
       border-radius: 150px;
       width: 25px;
@@ -321,7 +341,7 @@ progress {
     border-radius: 5px;
     width: 45%; }
     .animal-container .animal-details .animal-stat {
-      color: #6b22c3;
+      color: #289D8F;
       display: inline-block;
       padding-right: 25px; }
   .animal-container .animal-name-lvl .animal-lvl {
@@ -332,8 +352,7 @@ progress {
   .animal-container .animal-img {
     min-height: 400px;
     position: relative;
-    margin: auto;
-    top: 100px; }
+    margin: auto; }
 
 .magic-number {
   background-color: #fff;

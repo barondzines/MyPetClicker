@@ -54,7 +54,7 @@ export class ActivitiesEngineComponent implements OnInit {
 
     public checkActivities(id) {
 
-        /**this will check against total magic and currnet animal lvl to see if there enough available for you to purchase an activity,
+        /**this will check against total magic and current animal lvl to see if there enough available for you to purchase an activity,
          * if there is it will set the button to enabled **/
 
         let currentAnimalLvl = Number(this.getCurrentAnimallvl());

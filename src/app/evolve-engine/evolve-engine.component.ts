@@ -40,7 +40,7 @@ export class EvolveEngineComponent implements OnInit {
 
     let currentAnimal = Number(document.getElementById('animal-id').innerHTML);
 
-    console.log('this is the animal levle', currentAnimal);
+    console.log('this is the animal level', currentAnimal);
 
     for (let i = 0; i < this.animals.length; i++) {
       if (this.animals[i].id == currentAnimal) {

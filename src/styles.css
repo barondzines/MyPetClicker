@@ -1,19 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 @import url(~@angular/material/prebuilt-themes/indigo-pink.css);
 .texture {
-  background-image: url(assets/webdecorations/circles-light.png);
-  background-repeat: repeat;
-  background: #06767a;
-  background: -moz-linear-gradient(0deg, #06767a 7%, #3ab7c9 30%, white 100%);
-  background: -webkit-linear-gradient(0deg, #06767a 7%, #3ab7c9 30%, white 100%);
-  background: linear-gradient(0deg, #06767a 7%, #3ab7c9 30%, white 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#06767a",endColorstr="#ffffff",GradientType=1);
   height: 100%;
   position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0; }
+  .texture .game-wall {
+    background-color: #0a2632; }
 
 .bar {
   height: 20px;
@@ -144,6 +139,11 @@
 .animal-card {
   max-width: 300px; }
 
+.animal-wall {
+  background-image: url(assets/animals/dragon_background.png);
+  background-repeat: no-repeat;
+  background-position: top; }
+
 .animal-img {
   max-width: 300px;
   margin: 0 auto; }
@@ -157,7 +157,7 @@ html {
   font-size: 16px;
   font-family: "Fjalla One", sans-serif;
   color: #284653;
-  background-color: #f1f1f1; }
+  background-color: #0a2632; }
 
 h1, .h1,
 h2, .h2,
@@ -350,9 +350,12 @@ progress {
   .animal-container .animal-name-lvl .animal-name {
     display: inline; }
   .animal-container .animal-img {
-    min-height: 400px;
+    height: 478px;
     position: relative;
     margin: auto; }
+    .animal-container .animal-img img {
+      position: relative;
+      top: 210px; }
 
 .magic-number {
   background-color: #fff;

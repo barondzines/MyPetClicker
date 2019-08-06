@@ -30,8 +30,14 @@
     }
 
     .animal-img{
-        min-height: 400px;
+        height: 478px;
         position: relative;
         margin: auto;
+
+        img{
+            position: relative;
+            top: 210px;
+        }
+
     }
 }

@@ -44,27 +44,6 @@ export const ANIMALS: Animal[] = [
         selected: false,
         evolve: false,
     },
-    {
-        id: 131415,
-        name: 'Dragon',
-        description: '',
-        age: 1,
-        evolveLvl: 0,
-        experienceNeeded: 50,
-        currentExperience: 0,
-        lvl: 1,
-        currentLvl: 0,
-        beauty: 10,
-        happiness: 100,
-        intelligence: 80,
-        speed: 100,
-        str: 25,
-        img: 'assets/animals/Crystal3.png',
-        icon: 'assets/animals/Crystal3.png',
-        upgradeCost: 1000,
-        selected: false,
-        evolve: false,
-    },
 
 
 ];

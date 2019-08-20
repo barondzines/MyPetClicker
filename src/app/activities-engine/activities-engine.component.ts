@@ -9,7 +9,7 @@ import { AnimalEngineComponent} from "../animal-engine/animal-engine.component";
 import {AnimalsService} from "../animals.service";
 import { interval} from "rxjs";
 import { takeWhile } from "rxjs/operators";
-import { ActivatedRoute } from "@angular/router";
+import {ActivatedRoute, ROUTER_CONFIGURATION} from "@angular/router";
 
 
 @Component({
